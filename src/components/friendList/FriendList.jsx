@@ -16,17 +16,17 @@ const FriendListItem = ({ avatar, name, isOnline, id }) => {
   );
 };
 
-export const FriendList = friends => {
+export const FriendList = ({friends}) => {
   return (
     <ul className={css.friendList}>
-      {friends.map(friend => (
+      {friends.map(friend => 
         <FriendListItem
           avatar={friend.avatar}
           name={friend.name}
           isOnline={friend.isOnline}
           id={friend.id}
         />
-      ))}
+      )}
     </ul>
   );
 };
